@@ -4,37 +4,41 @@ import { Text, View, StyleSheet } from "react-native";
 type Props = {
   num1: number;
   num2: number;
-  operator: string; 
+  operator: string;
 };
 
 const Workshop2_1: React.FC<Props> = ({ num1, num2, operator }) => {
   let result: string | number;
-  
-  switch (operator) {
-    case "+":
-      result = num1 + num2;
-      break;
-    case "-":
-      result = num1 - num2;
-      break;
-    case "*":
-      result = num1 * num2;
-      break;
-    case "/":
+  const validOperators = ["+", "-", "*", "/"];
+  if (!validOperators.includes(operator)) {
+    result = `${num1} ${operator} ${num2} = Invalid operator: `;
+  } else {
+    switch (operator) {
+      case "+":
+        result = num1 + num2;
+        break;
+      case "-":
+        result = num1 - num2;
+        break;
+      case "*":
+        result = num1 * num2;
+        break;
+      case "/":
         if (num2 === 0) {
-            result = `${num1} / ${num2} = Error (Divide by 0)`; 
-          } else {
-            result = `${num1} / ${num2} = ${num1 / num2}`; 
-          }
-      break;
-    default:
-      result = "Invalid operator";
-      break;
+          result = `${num1} / ${num2} = Error (Divide by 0)`;
+        } else {
+          result = `${num1} / ${num2} = ${num1 / num2}`;
+        }
+        break;
+      default:
+        result = "Invalid operator";
+        break;
+    }
   }
 
   return (
     <View style={styles.container}>
-       <Text style={styles.text}>
+      <Text style={styles.text}>
         {typeof result === "number"
           ? `${num1} ${operator} ${num2} = ${result}`
           : result}
