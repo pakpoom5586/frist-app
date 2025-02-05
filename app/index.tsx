@@ -22,11 +22,11 @@
 //   );
 // }
 
-import Workshop2_1 from "./workshop/workshop2.1";
+// import Workshop2_1 from "./workshop/workshop2.1";
 
-export default function Index() {
-  return <Workshop2_1 num1={10} num2={0} operator="/" />;
-}
+// export default function Index() {
+//   return <Workshop2_1 num1={10} num2={0} operator="/" />;
+// }
 
 // import Workshop2_2 from "./workshop/workshop2.2";
 
@@ -38,3 +38,49 @@ export default function Index() {
 //   ];
 
 //   return <Workshop2_2 items={items} />;};
+
+// import CounterApp from "./useState";
+
+// export default function Index() {
+//   return (
+//     <CounterApp />
+// );
+// }
+
+// import DependencyArrayExample from "./useEffect_Props";
+
+// export default function Index() {
+//   return (
+//     <DependencyArrayExample />
+//   );
+// }
+
+// import FetchDataApp from "./sideEffect";
+
+// export default function Index() {
+//   return (
+//     <FetchDataApp />
+//   );
+// }
+
+// import InputApp from "./onChangeText";
+// export default function Index() {
+//   return (
+//     <InputApp />
+//   );
+// }
+
+// import CartCounter from "./workshop/workshop3.1";
+// export default function Index(){
+//   return(<CartCounter/>)
+// }
+
+// import BatteryMonitor from "./workshop/workshop3.2";
+// export default function Index() {
+//   return <BatteryMonitor />;
+// }
+
+import BasicCalculator from "./workshop/workshop3.3";
+export default function Index(){
+  return(<BasicCalculator/>)
+}
